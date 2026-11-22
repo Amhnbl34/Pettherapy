@@ -496,6 +496,16 @@ const server = http.createServer(async (req, res) => {
 });
 
 (function seedAdmin() {
+  const mobile = U.normMobile(process.env.ADMIN_MOBILE || '');
+  if (mobile) {
+    const byMobile = D.users.find((x) => U.normMobile(x.mobile || '') === mobile);
+    if (byMobile && byMobile.role !== 'admin') {
+      byMobile.role = 'admin';
+      db.save();
+      console.log('   ✔ حساب موجود با شماره ADMIN_MOBILE مدیر شد');
+    }
+  }
+
   const email = U.str(process.env.ADMIN_EMAIL || '', 120).toLowerCase(), username = U.str(process.env.ADMIN_USERNAME || '', 40).toLowerCase(), pw = String(process.env.ADMIN_PASSWORD || '');
   if (!(email || username) || pw.length < 6) return;
   let u = D.users.find((x) => (email && x.email === email) || (username && x.username === username));
