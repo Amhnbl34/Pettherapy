@@ -1,0 +1,23 @@
+{
+  "name": "پت‌تراپی | فروشگاه حیوانات خانگی",
+  "short_name": "پت‌تراپی",
+  "description": "فروشگاه آنلاین غذا، مکمل، اسباب‌بازی و لباس برای سگ، گربه، پرنده و جوندگان",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FBF5E9",
+  "theme_color": "#35483B",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "shortcuts": [
+    { "name": "حساب من", "url": "/#account" },
+    { "name": "تنظیمات", "url": "/#settings" }
+  ]
+}

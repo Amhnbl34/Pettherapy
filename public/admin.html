@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#35483B">
+<meta name="robots" content="noindex">
+<title>پنل مدیریت پت‌تراپی</title>
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/admin.css">
+<script src="/js/prefs.js"></script>
+<script>if (window.applyPrefs) applyPrefs();</script>
+</head>
+<body>
+<header class="top">
+  <b id="ttl">⚙️ مدیریت فروشگاه</b>
+  <select id="storeSel" hidden aria-label="فروشگاه"></select>
+  <button id="out" class="btn ghost" data-act="logout" hidden>خروج</button>
+  <a href="/">← سایت</a>
+</header>
+<main class="wrap">
+  <div id="app"><p class="muted">در حال بارگذاری…</p></div>
+</main>
+<dialog id="dlg"></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="/js/admin.js"></script>
+</body>
+</html>
